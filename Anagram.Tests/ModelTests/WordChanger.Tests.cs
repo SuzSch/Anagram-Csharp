@@ -1,18 +1,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Anagram.Models;
+using System.Collections.Generic;
+using System;
 
-namespace WordChanger.Tests
+namespace Anagram.Tests
 {
     [TestClass]
     public class WordChangerTests
     {
-        // Test methods go here
         [TestMethod]
-        public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+        public void ChangeWordToArray_ChangeToArray_Array()
         {
-            // any necessary logic to prep for test; instantiating new classes, etc.
-            // we can also use the arrange, act, assert organization in any test. 
-            Assert.AreEqual(ExpectedResult, CodeToTest);
+            string userInput = "gig";
+            char[] Result = WordChanger.ChangeWordToArray(userInput);
+            Assert.AreEqual(typeof(char[]), Result.GetType());
         }
     }
 }

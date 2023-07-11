@@ -1,9 +1,15 @@
 using System.Collections.Generic;
+using System;
 
 namespace Anagram.Models
 {
     public class WordChanger
     {
-        // Business Logic goes here.
+        public static char[] ChangeWordToArray(string userInput)
+        {
+            string newWord = userInput.ToLower();
+            char[] wordArray = newWord.ToCharArray();
+            return wordArray;
+        }
     }
 }
